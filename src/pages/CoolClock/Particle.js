@@ -30,7 +30,7 @@ export default class Particle {
     const vx = Math.random() * this.width / 75 + 10;
     this.drop = true;
     this.vx = Math.random() >= 0.5 ? vx : -vx;
-    this.vy = -(Math.random() * this.width / 32 + 10);
+    this.vy = -(Math.random() * this.width / 20 + 10);
   }
 
   update (time) {
