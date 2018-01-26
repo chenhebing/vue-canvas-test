@@ -1,21 +1,11 @@
 # vue-canvas-test
 
-> A Vue.js project
+## 在线效果列表
+> 建议用`chrome`查看
 
-## Build Setup
+[placeholder]:p
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+| 标题 |  |
+| :-------- | :--------:|
+| [粒子时钟](https://chenhebing.github.io/vue-canvas-test/dist/index.html#/cool-clock) | [查看代码](https://github.com/chenhebing/vue-canvas-test/blob/master/src/pages/CoolClock/index.vue) |
+[/placeholder]:p
