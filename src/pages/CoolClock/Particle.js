@@ -1,10 +1,10 @@
 const g = 10;
-const radius = 8;
 export default class Particle {
-  constructor (ctx, width, height) {
+  constructor (ctx, width, height, radius) {
     this.ctx = ctx;
     this.width = width;
     this.height = height;
+    this.radiusConst = radius;
     this.reset(0, 0, '', false);
   }
 
@@ -27,10 +27,10 @@ export default class Particle {
   }
 
   goDrop () {
-    const vx = Math.random() * 16 + 10;
+    const vx = Math.random() * this.width / 75 + 10;
     this.drop = true;
     this.vx = Math.random() >= 0.5 ? vx : -vx;
-    this.vy = -(Math.random() * 64 + 10);
+    this.vy = -(Math.random() * this.width / 32 + 10);
   }
 
   update (time) {
@@ -38,16 +38,16 @@ export default class Particle {
       this.x += this.vx * time;
       this.y += this.vy * time;
       let vy = this.vy + g * time;
-      if (this.y >= this.height - radius) {
-        this.y = this.height - radius;
+      if (this.y >= this.height - this.radiusConst) {
+        this.y = this.height - this.radiusConst;
         vy = -vy * 0.8;
       }
       this.vy = vy;
-      if (this.x <= -radius || this.x >= this.width + radius) {
+      if (this.x <= -this.radiusConst || this.x >= this.width + this.radiusConst) {
         this.visible = false;
       }
     }
-    if (this.radius < radius) {
+    if (this.radius < this.radiusConst) {
       this.radius += 0.5;
     }
   }

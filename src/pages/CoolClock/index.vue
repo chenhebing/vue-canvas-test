@@ -15,18 +15,24 @@
   let preTime = new Date();
   let nextTime = new Date();
   let beat = false;
+  let width = 0;
+  let height = 0;
+  let radius = 0;
+  let circleXSpace = 0;
+  let letterSpace = 0;
+  let offsetX = 0;
 
-  const radius = 8;
-  const circleXSpace = 12;
-  const letterSpace = 20;
-  const width = 1400;
-  const height = 600;
-  const offsetX = 4 * (radius * 2 + circleXSpace) + letterSpace;
   const particles = [];
 
   export default {
     name: 'cool-clock',
     mounted () {
+      width = window.innerWidth;
+      height = width / 2 | 0;
+      radius = width / 125 | 0;
+      circleXSpace = width / 100 | 0;
+      letterSpace = width / 100 | 0;
+      offsetX = 4 * (radius * 2 + circleXSpace) + letterSpace;
       const { topLayer } = this.$refs;
       const rectConf = { width, height };
       Object.assign(topLayer, rectConf);
@@ -34,7 +40,7 @@
       txConst = (topLayer.width - ((radius * 2 + circleXSpace) * 4 * 8 + 7 * letterSpace)) / 2 | 0;
       tyConst = (topLayer.height - (radius * 2 + circleXSpace) * 6) / 3 | 0;
       for (let i = 0; i < 200; ++i) {
-        particles.push(new Particle(topCtx, width, height));
+        particles.push(new Particle(topCtx, width, height, radius));
       }
       this.setTime(preTime);
       this.goAnimate();
@@ -110,11 +116,8 @@
   .cool-clock-container {
     overflow: hidden;
     width: 100%;
-    height: 600px;
-    margin-top: 100px;
+    margin-top: 50px;
     .top{
-      width: 1400px;
-      height: 600px;
       background-color: black;
     }
   }
