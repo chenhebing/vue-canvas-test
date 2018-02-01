@@ -133,7 +133,7 @@
     .right {
       flex: 1;
       height: 540px;
-      margin: 0 50px;
+      margin: 0 3%;
     }
   }
 </style>
