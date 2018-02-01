@@ -1,8 +1,5 @@
 <template>
   <div class="music-player-container">
-    <div class="left">
-      敬请期待
-    </div>
     <audio id="music" loop preload autoplay :src="require('../../assets/MP3/CroatianRhapsody.mp3')"></audio>
     <div class="right">
       <canvas id="bottomCanvas"></canvas>
@@ -121,19 +118,18 @@
 </script>
 
 <style scode lang="less">
+  body {
+    margin: 0;
+    background-color: black;
+  }
   .music-player-container {
-    width: 100%;
+    margin: 0 3%;
     height: 100vh;
     display: flex;
     align-items: center;
-    background-color: black;
-    .left {
-      width: 0;
-    }
     .right {
-      flex: 1;
+      width: 100%;
       height: 540px;
-      margin: 0 3%;
     }
   }
 </style>
