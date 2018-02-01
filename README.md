@@ -9,4 +9,5 @@
 | :-------- | :--------:|
 | [粒子时钟](https://chenhebing.github.io/vue-canvas-test/dist/index.html#/cool-clock) | [查看代码](https://github.com/chenhebing/vue-canvas-test/blob/master/src/pages/CoolClock/index.vue) |
 | [可视化音乐播放器](https://chenhebing.github.io/vue-canvas-test/dist/index.html#/music-player) | [查看代码](https://github.com/chenhebing/vue-canvas-test/blob/master/src/pages/MusicPlayer/index.vue) |
+
 [/placeholder]:p
