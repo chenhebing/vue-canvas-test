@@ -1,6 +1,6 @@
 <template>
   <div class="music-player-container">
-    <audio id="music" loop preload autoplay :src="require('../../assets/MP3/CroatianRhapsody.mp3')"></audio>
+    <audio id="music" loop autoplay :src="require('../../assets/MP3/CroatianRhapsodyMini.mp3')"></audio>
     <div class="right">
       <canvas id="bottomCanvas"></canvas>
     </div>
