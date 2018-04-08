@@ -19,10 +19,3 @@ export {
   coolClockNumData,
   coolClockNumColor,
 }
-
-
-
-
-
-
-
