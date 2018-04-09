@@ -15,8 +15,6 @@ const coolClockNumData = {
 
 const coolClockNumColor = ['#7c5be6', '#4292e4', '#ffffff', '#01c9d2', '#9cd321', '#ffffff', '#ff8556', '#fecd0f'];
 
-
-
 export {
   coolClockNumData,
   coolClockNumColor,
