@@ -43,10 +43,6 @@
                                 <span class="custom" v-text="edu.subject"></span>
                                 <span class="custom" v-text="edu.top"></span>
                             </div>
-                            <div class="grad-subject">
-                                <span>主要研究：</span>
-                                <span v-text="edu.detail"></span>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -63,7 +59,7 @@
                         </div>
                     </div>
                     <div class="detail">
-                        <div class="title">主要项目经历：</div>
+                        <div class="title">主要经历：</div>
                         <div class="detail-lists">
                             <div class="detail-list" v-for="detail in detailLists" v-bind:key="detail.title">
                                 <span class="pot"></span>
@@ -72,7 +68,7 @@
                                         <span v-text="detail.title"></span>
                                         <span v-text="detail.manager"></span>
                                     </div>
-                                    <div class="detail-content" v-text="detail.detail">
+                                    <div class="detail-content" v-html="detail.detail">
                                     </div>
                                 </div>
                             </div>
@@ -119,16 +115,12 @@
                     len: 85,
                     skilled: '熟练',
                 }, {
-                    name: 'koa2',
-                    len: 85,
-                    skilled: '熟练',
-                }, {
                     name: 'webpack',
                     len: 80,
                     skilled: '熟练',
                 }, {
                     name: '算法',
-                    len: 80,
+                    len: 70,
                     skilled: '掌握',
                 }, {
                     name: 'WebAssembly',
@@ -138,7 +130,7 @@
                 educations: [{
                     date: '2010.09 - 2014.06',
                     school: '南京邮电大学',
-                    subject: '通信工程',
+                    subject: '理工强化班',
                     top: '前10%',
                     detail: '单片机、FPGA现场可编程，多次参加电子设计大赛',
                 }, {
@@ -149,27 +141,38 @@
                     detail: '图像处理、基于 HEVC 的编码算法优化',
                 }],
                 works: [{
-                    date: '2016.11 - 2018.3',
+                    date: '2016.11 - 2018.03',
                     company: '美团点评',
                     position: 'web前端开发',
                 }, {
-                    date: '2018.4 - 至今',
+                    date: '2018.04 - 至今',
                     company: '网易云音乐',
                     position: 'web前端开发',
                 }],
                 detailLists: [{
                     title: '基于 koa2 的 node 框架 - monking 开发',
                     manager: '',
-                    detail: '刚到云音乐，发现我们是没有 node 端框架的。虽然目前静态部署在前端应用已经很普遍，但是要给前端同学赋能，做更多的事情一个好用的 node 框架是必不可少的。monking 基于 MVC 的设计理念，添加了 aop 的支持，具体可以参考 github 个人主页「https://github.com/chenhebing」。在 monking 的基础上，开发了晨读系统及配套的 chrome 插件，支持每日晨读自动推送；文档系统，模仿语雀功能实现等系统。目前也有其他三个团队在使用 monking 开发内部系统。',
+                    detail: `
+                        刚到云音乐，发现我们是没有 node 端框架的。虽然目前静态部署在前端应用已经很普遍，但是要给前端同学赋能，做更多的事情一个好用的 node 框架是必不可少的。
+                        monking 基于 MVC 的设计理念，对 service、model 做了依赖注入，同时支持了 aop，使用修饰器解耦代码结构，提供了一套插件机制，具体可以参考 github「 https://github.com/chenhebing 」。
+                        <br />
+                        <div style="margin-top: 10px;"></div>
+                        在 monking 的基础上，开发了晨读系统及配套的 chrome 插件，支持每日晨读定时推送；模仿语雀开发了云音乐文档管理系统等。目前也有其他三个团队使用了 monking 开发内部系统。
+                    `,
                 }, {
-                    title: 'js bridge',
-                    manager: '',
-                    detail: '对于 H5 来说，调用 native 页面或者 native 功能是必须的。我们之前是直接使用协议跳转的方式来实现的，但是要多次调用协议就需要放在事件队列里面跳转，并且通过这种跳转链接拦截的方式也不是主流，于是提出开发 js 桥的方案。我主要负责了框架的搭建和 js bridge 的设计，提供了一个管理 api 的文档系统，js bridge 的 npm 包依赖文档，所有的 api 方法和 native 的协议 mapping 关系在文档系统里面维护，这样可以保证文档和 npm 永远是一致的。',
+                    title: '业务',
+                    maneger: '',
+                    detail: `
+                        在美团主要使用 React 及 Vue 开发一些 App 内的 H5 页面，也会负责一些活动的 H5 开发，对移动端兼容性问题有一定的了解。
+                        <div style="margin-top: 10px;"></div>
+                        在云音乐负责平台相关的业务，主要包括 cms 后台及部分 H5 页面开发，也参与了一些 node 项目的开发。
+                    `,
                 }],
                 commetMyselfs: [
-                    '善于解决问题，勇于承担责任，在大学期间担任了两年班长和担任了一届科学与技术协会电子部主席，参加了多个电子类比赛并获奖。',
-                    '研究生期间学习图像处理，视频编解码，研究算法理论，后学习并喜欢上了 web 开发。',
-                    '在美团点评任职，开阔了眼界，学到了很多先进的技术，形成了初步的价值观，尤其以客户为中心的核心理念；在网易云音乐，不仅技术得到了极大的提升，而且能够发现工作中存在的问题，并通过开发工具来改善和提高效率。',
+                    '我学习刻苦认真，勇于承担责任，善于解决问题，在大学期间担任了两年班长和一届科学与技术协会电子部主席，参加了多次电子类比赛并获奖。',
+                    '研究生期间研究算法，学习web开发，最终选择了发展如火如荼的 web 前端开发作为未来职业',
+                    `这两年的工作中，技术水平得到了快速的提升，可以独立负责完成业务需求及技术项目；能够快速定位解决问题；会积极主动推动优化、改进或拓展现有的系统方案；能够发现工作中存在的问题，并通过开发工具来改善和提高效率。`,
+                    `除了技术，美团点评的价值观对我也有深刻的影响。尤其以客户为中心，让我明白了，做产品要站在用户的角度思考问题，要为用户提供一个完整流畅易懂的产品，最终对产品负责，而不仅仅是完成前端的需求。`,
                 ],
             };
         },
@@ -286,7 +289,7 @@
                     font-size: 14px;
                 }
                 .grad-wrap {
-                    margin-bottom: 10px;
+                    margin-bottom: 20px;
                     .grad-subject {
                         color: #878686;
                         font-size: 14px;
